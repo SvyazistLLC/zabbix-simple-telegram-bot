@@ -1,17 +1,12 @@
 import args from 'args';
 import axios from 'axios';
 import winston from 'winston';
-import {config as dotenvConfig} from 'dotenv';
+import config from 'config';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import DailyRotateFile from 'winston-daily-rotate-file';
 require('winston-daily-rotate-file');
 
-dotenvConfig();
-const {TOKEN} = process.env;
-
-if (!TOKEN) {
-  throw new Error('No environment variable: TOKEN');
-}
+const TOKEN = config.get('TOKEN');
 
 const transport = new winston.transports.DailyRotateFile({
   filename: 'application-%DATE%.log',
