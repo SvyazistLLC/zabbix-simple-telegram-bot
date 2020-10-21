@@ -17,7 +17,7 @@ if (!TOKEN) {
 }
 
 const transport = new winston.transports.DailyRotateFile({
-  filename: 'application-%DATE%.log',
+  filename: '/var/log/tssend-%DATE%.log',
   datePattern: 'YYYY-MM-DD-HH',
   zippedArchive: true,
   maxSize: '20m',
