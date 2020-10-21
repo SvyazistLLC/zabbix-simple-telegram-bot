@@ -32,7 +32,14 @@ parser.add_argument('-m', '--message');
 parser.add_argument('-s', '--subject');
 parser.add_argument('-t', '--to');
 
-const {to: chat_id, message, subject} = parser.parse_args();
+const {to, message, subject} = parser.parse_args();
+
+let chat_id = to.trim();
+if (process.env[chat_id.toUpperCase()]) {
+  chat_id = process.env[chat_id.toUpperCase()];
+}
+// process.env;
+// if( process.env)
 
 loger.info(JSON.stringify({chat_id, message, subject}));
 
