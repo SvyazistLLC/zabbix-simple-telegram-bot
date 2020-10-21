@@ -81,6 +81,11 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@types/argparse@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/argparse/-/argparse-2.0.2.tgz#4eb7e626975ff2526a08a12db5e6cc303807e657"
+  integrity sha512-z5yKiFv9jZLXfjLzbPq2Zv0PboFDBZ2NKNs7kC/+AIfqKYcGqGw2ukL0q0NbgCs/ShTTRx+A0/VR+DLnGhAWtw==
+
 "@types/args@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/args/-/args-3.0.0.tgz#2fd21cfbdaf5e1ed110bd239de42a82330d6ecf6"
@@ -92,6 +97,13 @@
   integrity sha1-7CMA++fX3d1+udOr+HmZlkyvzkY=
   dependencies:
     axios "*"
+
+"@types/dotenv@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@types/dotenv/-/dotenv-8.2.0.tgz#5cd64710c3c98e82d9d15844375a33bf1b45d053"
+  integrity sha512-ylSC9GhfRH7m1EUXBXofhgx4lUWmFeQDINW5oLuS+gxWdfUeW4zJdeVTYVkexEW+e2VUvlZR2kGnGGipAWR7kw==
+  dependencies:
+    dotenv "*"
 
 "@types/json-schema@^7.0.3":
   version "7.0.6"
@@ -264,6 +276,11 @@ argparse@^1.0.7:
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   dependencies:
     sprintf-js "~1.0.2"
+
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
 args@^5.0.1:
   version "5.0.1"
@@ -534,6 +551,11 @@ colorspace@1.1.x:
     color "3.0.x"
     text-hex "1.0.x"
 
+comander@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/comander/-/comander-0.0.1-security.tgz#13e2d1c9b7ab0ffe37c3b6ece671c9e3a0541f9d"
+  integrity sha512-cxCGvHkaEtEsBsKjz8XrAiaOIkecgmMvhetsaxQYt35e8MEW4ATPevJTrzOrpAd1NyWmgIpLrwPLhQoHvnj89w==
+
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
@@ -545,6 +567,13 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+
+config@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/config/-/config-3.3.2.tgz#35be3846054340f0f79778b2445afffbc11867c7"
+  integrity sha512-NlGfBn2565YA44Irn7GV5KHlIGC3KJbf0062/zW5ddP9VXIuRj0m7HVyFAWvMZvaHPEglyGfwmevGz3KosIpCg==
+  dependencies:
+    json5 "^2.1.1"
 
 configstore@^5.0.1:
   version "5.0.1"
@@ -656,6 +685,11 @@ dot-prop@^5.2.0:
   integrity sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==
   dependencies:
     is-obj "^2.0.0"
+
+dotenv@*, dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -1468,6 +1502,13 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+
+json5@^2.1.1:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.3.tgz#c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43"
+  integrity sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
+  dependencies:
+    minimist "^1.2.5"
 
 jsprim@^1.2.2:
   version "1.4.1"

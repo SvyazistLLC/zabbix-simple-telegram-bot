@@ -1,6 +1,6 @@
-import args from 'args';
 import axios from 'axios';
 import path from 'path';
+import {ArgumentParser} from 'argparse';
 import winston from 'winston';
 import {config as dotenvConfig} from 'dotenv';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -25,15 +25,17 @@ const transport = new winston.transports.DailyRotateFile({
 });
 
 const loger = winston.createLogger({transports: [transport]});
+const parser = new ArgumentParser({
+  description: 'Argparse example',
+});
+parser.add_argument('-m', '--message');
+parser.add_argument('-s', '--subject');
+parser.add_argument('-t', '--to');
 
-args
-  .option('message', 'Your message')
-  .option('subject', 'Your subject')
-  .option('to', 'send to');
+const {to: chat_id, message, subject} = parser.parse_args();
+console.log(chat_id, message, subject);
 
-const {to: chat_id, message, subject, token} = args.parse(process.argv);
-
-loger.info(JSON.stringify({chat_id, message, subject, token}));
+loger.info(JSON.stringify({chat_id, message, subject}));
 
 const text = `${subject}
 ${message}
