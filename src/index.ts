@@ -17,7 +17,7 @@ if (!TOKEN) {
 }
 
 const transport = new winston.transports.DailyRotateFile({
-  filename: '/var/log/tssend-%DATE%.log',
+  filename: '/var/log/tgsend/tgsend-%DATE%.log',
   datePattern: 'YYYY-MM-DD-HH',
   zippedArchive: true,
   maxSize: '20m',
@@ -33,7 +33,6 @@ parser.add_argument('-s', '--subject');
 parser.add_argument('-t', '--to');
 
 const {to: chat_id, message, subject} = parser.parse_args();
-console.log(chat_id, message, subject);
 
 loger.info(JSON.stringify({chat_id, message, subject}));
 
@@ -42,8 +41,14 @@ ${message}
 `;
 
 const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+loger.info(url);
 
-axios.post(url, {
-  chat_id,
-  text,
-});
+axios
+  .post(url, {
+    chat_id,
+    text,
+  })
+  .then(res => {
+    loger.info(res.statusText);
+  })
+  .catch(e => loger.error(e));
