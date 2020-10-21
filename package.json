@@ -5,6 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/args": "^3.0.0",
+    "@types/axios": "^0.14.0",
     "@types/node": "^14.11.2",
     "eslint": "^7.11.0",
     "gts": "^3.0.1",
@@ -21,6 +22,8 @@
     "posttest": "yarn run lint"
   },
   "dependencies": {
-    "args": "^5.0.1"
+    "args": "^5.0.1",
+    "axios": "^0.20.0",
+    "slimbot": "^4.9.0"
   }
 }
