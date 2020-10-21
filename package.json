@@ -22,8 +22,11 @@
     "posttest": "yarn run lint"
   },
   "dependencies": {
+    "@types/winston": "^2.4.4",
     "args": "^5.0.1",
     "axios": "^0.20.0",
-    "slimbot": "^4.9.0"
+    "slimbot": "^4.9.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
   }
 }
