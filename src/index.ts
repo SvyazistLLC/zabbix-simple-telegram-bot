@@ -1,8 +1,17 @@
 import args from 'args';
 import axios from 'axios';
 import winston from 'winston';
+import {config as dotenvConfig} from 'dotenv';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import DailyRotateFile from 'winston-daily-rotate-file';
 require('winston-daily-rotate-file');
+
+dotenvConfig();
+const {TOKEN} = process.env;
+
+if (!TOKEN) {
+  throw new Error('No environment variable: TOKEN');
+}
 
 const transport = new winston.transports.DailyRotateFile({
   filename: 'application-%DATE%.log',
@@ -15,7 +24,6 @@ const transport = new winston.transports.DailyRotateFile({
 const loger = winston.createLogger({transports: [transport]});
 
 args
-  .option('token', 'bot token')
   .option('message', 'Your message')
   .option('subject', 'Your subject')
   .option('to', 'send to');
@@ -28,7 +36,7 @@ const text = `${subject}
 ${message}
 `;
 
-const url = `https://api.telegram.org/bot${token}/sendMessage`;
+const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 axios.post(url, {
   chat_id,
