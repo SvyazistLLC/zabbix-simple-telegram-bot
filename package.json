@@ -22,10 +22,12 @@
     "posttest": "yarn run lint"
   },
   "dependencies": {
+    "@types/config": "^0.0.36",
     "@types/dotenv": "^8.2.0",
     "@types/winston": "^2.4.4",
     "args": "^5.0.1",
     "axios": "^0.20.0",
+    "config": "^3.3.2",
     "dotenv": "^8.2.0",
     "slimbot": "^4.9.0",
     "winston": "^3.3.3",
